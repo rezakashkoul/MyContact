@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		EB619E9128708B7A00CBD9E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB619E9028708B7A00CBD9E0 /* AppDelegate.swift */; };
 		EB619E9328708B7A00CBD9E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB619E9228708B7A00CBD9E0 /* SceneDelegate.swift */; };
-		EB619E9528708B7A00CBD9E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB619E9428708B7A00CBD9E0 /* ViewController.swift */; };
+		EB619E9528708B7A00CBD9E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB619E9428708B7A00CBD9E0 /* HomeViewController.swift */; };
 		EB619E9828708B7A00CBD9E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB619E9628708B7A00CBD9E0 /* Main.storyboard */; };
 		EB619E9A28708B7B00CBD9E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB619E9928708B7B00CBD9E0 /* Assets.xcassets */; };
 		EB619E9D28708B7B00CBD9E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB619E9B28708B7B00CBD9E0 /* LaunchScreen.storyboard */; };
 		EB619EA828708B7C00CBD9E0 /* MyContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB619EA728708B7C00CBD9E0 /* MyContactTests.swift */; };
 		EB619EB228708B7C00CBD9E0 /* MyContactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB619EB128708B7C00CBD9E0 /* MyContactUITests.swift */; };
 		EB619EB428708B7C00CBD9E0 /* MyContactUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB619EB328708B7C00CBD9E0 /* MyContactUITestsLaunchTests.swift */; };
+		EB619EC1287094E200CBD9E0 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB619EC0287094E200CBD9E0 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		EB619E8D28708B7A00CBD9E0 /* MyContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB619E9028708B7A00CBD9E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB619E9228708B7A00CBD9E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EB619E9428708B7A00CBD9E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB619E9428708B7A00CBD9E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EB619E9728708B7A00CBD9E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB619E9928708B7B00CBD9E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB619E9C28708B7B00CBD9E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		EB619EAD28708B7C00CBD9E0 /* MyContactUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyContactUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB619EB128708B7C00CBD9E0 /* MyContactUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContactUITests.swift; sourceTree = "<group>"; };
 		EB619EB328708B7C00CBD9E0 /* MyContactUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContactUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EB619EC0287094E200CBD9E0 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +103,8 @@
 			children = (
 				EB619E9028708B7A00CBD9E0 /* AppDelegate.swift */,
 				EB619E9228708B7A00CBD9E0 /* SceneDelegate.swift */,
-				EB619E9428708B7A00CBD9E0 /* ViewController.swift */,
+				EB619E9428708B7A00CBD9E0 /* HomeViewController.swift */,
+				EB619EC0287094E200CBD9E0 /* Contact.swift */,
 				EB619E9628708B7A00CBD9E0 /* Main.storyboard */,
 				EB619E9928708B7B00CBD9E0 /* Assets.xcassets */,
 				EB619E9B28708B7B00CBD9E0 /* LaunchScreen.storyboard */,
@@ -258,7 +261,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB619E9528708B7A00CBD9E0 /* ViewController.swift in Sources */,
+				EB619EC1287094E200CBD9E0 /* Contact.swift in Sources */,
+				EB619E9528708B7A00CBD9E0 /* HomeViewController.swift in Sources */,
 				EB619E9128708B7A00CBD9E0 /* AppDelegate.swift in Sources */,
 				EB619E9328708B7A00CBD9E0 /* SceneDelegate.swift in Sources */,
 			);
@@ -445,6 +449,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,6 +478,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
