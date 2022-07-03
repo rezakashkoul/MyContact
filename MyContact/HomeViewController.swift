@@ -12,7 +12,9 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var contacts = [FetchedContact]()
+    var contacts = [Contact]()
+    var selectedContacts: [Contact] = []
+    var isSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +41,8 @@ class HomeViewController: UIViewController {
                 let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
                 do {
                     try store.enumerateContacts(with: request, usingBlock: { (contact, stopPointer) in
-                        self.contacts.append(FetchedContact(firstName: contact.givenName, lastName: contact.familyName, telephone: contact.phoneNumbers.first?.value.stringValue ?? ""))
+                        self.contacts.append(Contact(firstName: contact.givenName, lastName: contact.familyName, telephone: contact.phoneNumbers.first?.value.stringValue ?? "", isPicked: false))
+                        self.contacts = self.contacts.sorted(by: {$0.firstName < $1.firstName})
                     })
                 } catch let error {
                     print("Failed to enumerate contact", error)
@@ -60,10 +63,22 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contact", for: indexPath)
+        cell.selectionStyle = .none
         let contact = contacts[indexPath.row]
         cell.textLabel?.text = contact.firstName + " " + contact.lastName
         cell.detailTextLabel?.text = contacts[indexPath.row].telephone
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        let currentContact = contacts[indexPath.row]
+        if selectedContacts.filter({$0 == currentContact}).isEmpty {
+            cell.accessoryType = .checkmark
+            selectedContacts.append(currentContact)
+        } else {
+            selectedContacts = selectedContacts.filter({$0 != currentContact})
+            cell.accessoryType = .none
+        }
+    }
 }
-
